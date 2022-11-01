@@ -31,8 +31,8 @@ const config: webpack.Configuration = {
 			{
 				test: /\.s[ac]ss$/i,
 				use: [
-					// isProd ? MiniCssExtractPlugin.loader : 'style-loader', // change true to isProd ?
-					MiniCssExtractPlugin.loader,
+					isProd ? MiniCssExtractPlugin.loader : 'style-loader', // change true to isProd ?
+					// MiniCssExtractPlugin.loader,
 					'css-loader',
 					'sass-loader',
 				],
